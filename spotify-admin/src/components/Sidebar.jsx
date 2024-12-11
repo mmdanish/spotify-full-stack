@@ -19,7 +19,7 @@ const Sidebar = () => {
       <div className="flex flex-col gap-5 mt-10">
         <NavLink
           to="/add-song"
-          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[8vw] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
+          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[max(8vw,10px)] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
         >
           <img className="w-5" src={assets.add_song} alt="" />
           <p className="hidden sm:block">Add Song</p>
@@ -27,7 +27,7 @@ const Sidebar = () => {
 
         <NavLink
           to="/lsit-song"
-          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[8vw] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
+          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[max(8vw,10px)] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
         >
           <img className="w-5" src={assets.song_icon} alt="" />
           <p className="hidden sm:block">List Song</p>
@@ -35,7 +35,7 @@ const Sidebar = () => {
 
         <NavLink
           to="/add-album"
-          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[8vw] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
+          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[max(8vw,10px)] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
         >
           <img className="w-5" src={assets.add_album} alt="" />
           <p className="hidden sm:block">Add Album</p>
@@ -43,7 +43,7 @@ const Sidebar = () => {
 
         <NavLink
           to="/list-album"
-          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[8vw] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
+          className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[max(8vw,10px)] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
         >
           <img className="w-5" src={assets.album_icon} alt="" />
           <p className="hidden sm:block">List Album</p>
