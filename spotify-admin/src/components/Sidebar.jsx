@@ -26,7 +26,7 @@ const Sidebar = () => {
         </NavLink>
 
         <NavLink
-          to="/lsit-song"
+          to="/list-song"
           className="flex items-center gap-2.5 bg-white text-gray-800 border border-black p-2 pr-[max(8vw,10px)] drop-shadow-[-4px_4px_#00FF5B] text-sm font-medium"
         >
           <img className="w-5" src={assets.song_icon} alt="" />
