@@ -3,9 +3,19 @@ import { assets } from "../assets/assets";
 import { PlayerContext } from "../context/PlayerContext";
 
 const Player = () => {
-  const { track, seekBar, seekBg, playerStatus, play, pause, time, previous, next, seekSong } =
-    useContext(PlayerContext);
-  return (
+  const {
+    track,
+    seekBar,
+    seekBg,
+    playerStatus,
+    play,
+    pause,
+    time,
+    previous,
+    next,
+    seekSong,
+  } = useContext(PlayerContext);
+  return track ? (
     <div className="h-[10%] bg-black flex justify-between items-center text-white px-4">
       <div className="hidden lg:flex items-center gap-4">
         <img className="w-12" src={track.image} alt="" />
@@ -21,7 +31,12 @@ const Player = () => {
             src={assets.shuffle_icon}
             alt=""
           />
-          <img onClick={previous} className="w-4 cursor-pointer" src={assets.prev_icon} alt="" />
+          <img
+            onClick={previous}
+            className="w-4 cursor-pointer"
+            src={assets.prev_icon}
+            alt=""
+          />
           {playerStatus ? (
             <img
               onClick={pause}
@@ -37,11 +52,18 @@ const Player = () => {
               alt=""
             />
           )}
-          <img onClick={next} className="w-4 cursor-pointer" src={assets.next_icon} alt="" />
+          <img
+            onClick={next}
+            className="w-4 cursor-pointer"
+            src={assets.next_icon}
+            alt=""
+          />
           <img className="w-4 cursor-pointer" src={assets.loop_icon} alt="" />
         </div>
         <div className="flex items-center gap-5">
-          <p>{time.currentTime.minute}:{time.currentTime.second}</p>
+          <p>
+            {time.currentTime.minute}:{time.currentTime.second}
+          </p>
           <div
             ref={seekBg}
             onClick={seekSong}
@@ -52,7 +74,9 @@ const Player = () => {
               className="h-1 border-none w-0 bg-green-800 rounded-full"
             />
           </div>
-          <p>{time.totalTime.minute}:{time.totalTime.second}</p>
+          <p>
+            {time.totalTime.minute}:{time.totalTime.second}
+          </p>
         </div>
       </div>
       <div className="hidden lg:flex items-center gap-2 opacity-75">
@@ -66,7 +90,7 @@ const Player = () => {
         <img className="w-4" src={assets.zoom_icon} alt="" />
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Player;
